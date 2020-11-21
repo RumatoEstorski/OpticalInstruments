@@ -32,19 +32,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pb1 = new System.Windows.Forms.PictureBox();
             this.pb2 = new System.Windows.Forms.PictureBox();
-            this.pb3 = new System.Windows.Forms.PictureBox();
+            this.pbLense = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.Focus = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Focus = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLense)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Focus)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(969, 86);
+            this.button1.Location = new System.Drawing.Point(993, 67);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 28);
@@ -77,20 +77,21 @@
             this.pb2.Click += new System.EventHandler(this.pb2_Click);
             this.pb2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mouseClick);
             // 
-            // pb3
+            // pbLense
             // 
-            this.pb3.Image = ((System.Drawing.Image)(resources.GetObject("pb3.Image")));
-            this.pb3.Location = new System.Drawing.Point(560, 177);
-            this.pb3.Margin = new System.Windows.Forms.Padding(4);
-            this.pb3.Name = "pb3";
-            this.pb3.Size = new System.Drawing.Size(75, 235);
-            this.pb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb3.TabIndex = 5;
-            this.pb3.TabStop = false;
+            this.pbLense.Image = ((System.Drawing.Image)(resources.GetObject("pbLense.Image")));
+            this.pbLense.Location = new System.Drawing.Point(560, 177);
+            this.pbLense.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLense.Name = "pbLense";
+            this.pbLense.Size = new System.Drawing.Size(75, 235);
+            this.pbLense.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLense.TabIndex = 5;
+            this.pbLense.TabStop = false;
+            this.pbLense.BackColorChanged += new System.EventHandler(this.pb2_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(969, 122);
+            this.button6.Location = new System.Drawing.Point(993, 103);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(153, 28);
@@ -98,42 +99,34 @@
             this.button6.Text = "Вогнутая";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // Focus
-            // 
-            this.Focus.Location = new System.Drawing.Point(1045, 8);
-            this.Focus.Name = "Focus";
-            this.Focus.Size = new System.Drawing.Size(100, 22);
-            this.Focus.TabIndex = 7;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(928, 11);
+            this.label1.Location = new System.Drawing.Point(893, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Введите фокус:";
             // 
-            // button2
+            // Focus
             // 
-            this.button2.Location = new System.Drawing.Point(969, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 28);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Нарисовать фокус";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Focus.Location = new System.Drawing.Point(1010, 4);
+            this.Focus.Maximum = 5;
+            this.Focus.Minimum = 1;
+            this.Focus.Name = "Focus";
+            this.Focus.Size = new System.Drawing.Size(122, 56);
+            this.Focus.TabIndex = 10;
+            this.Focus.Value = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 608);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Focus);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.pb3);
+            this.Controls.Add(this.pbLense);
             this.Controls.Add(this.pb2);
             this.Controls.Add(this.pb1);
             this.Controls.Add(this.button1);
@@ -142,7 +135,8 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLense)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Focus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,11 +147,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pb1;
         private System.Windows.Forms.PictureBox pb2;
-        private System.Windows.Forms.PictureBox pb3;
+        private System.Windows.Forms.PictureBox pbLense;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox Focus;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TrackBar Focus;
     }
 }
 
