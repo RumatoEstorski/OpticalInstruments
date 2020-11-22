@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OpticalInstruments
 {
@@ -28,9 +29,9 @@ namespace OpticalInstruments
             return new Point((int)v.X, (int)v.Y);
         }
 
-       // public static Vector rV(this Control c)
-      //  {
-       //     return new Vector(c.Left + c.Width / 2, c.Top + c.Height / 2);
-       // }
+       public static Vector rV(this Control c)
+       {
+           return new Vector(c.Left + c.Width / 2, c.Top + c.Height / 2);
+       }
     }
 }
