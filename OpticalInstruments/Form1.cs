@@ -37,6 +37,7 @@ namespace OpticalInstruments
         private void button1_Click(object sender, EventArgs e)
         {
             g.DrawVector(v, Pens.Red, pointSart);
+
         }
 
        // private void button6_Click(object sender, EventArgs e)
@@ -47,7 +48,7 @@ namespace OpticalInstruments
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             g.Clear(BackColor);
-            F = Focus.Value;
+            F = Focus.Value*100;
             g.DrawLine(Pens.Black, pStart, pFinish);
             g.DrawLine(Pens.Black, pbLense.Location.X + pbLense.Width + F * 45, pbLense.Location.Y + pbLense.Height / 2 - 20, pbLense.Location.X + pbLense.Width + F * 45, pbLense.Location.Y + pbLense.Height / 2 + 20);
             g.DrawLine(Pens.Black, pbLense.Location.X - F * 45, pbLense.Location.Y + pbLense.Height / 2 - 20, pbLense.Location.X - F * 45, pbLense.Location.Y + pbLense.Height / 2 + 20);
@@ -62,12 +63,14 @@ namespace OpticalInstruments
 
             Vector pad = (pbLense.rV()- pb2.rV()).Projection(optical);
             g.DrawVector(pad, pen, pb2.rV());
-            Vector pad2 = (pbLense.rV() - pb2.rV());
-            g.DrawVector(pad2, pen, pb2.rV());
-            Vector pad3 = (pb1.rV() - pbLense.rV());
-            g.DrawVector(pad3, pen, pbLense.rV());
-            Vector pad4 = (pb1.rV() - pb2.rV());
-            g.DrawVector(pad4, pen, pb2.rV());
+            Vector focus = optical / optical.Abs * F;
+            Vector lense = (pb2.rV() + pad) - pbLense.rV();
+            Vector toFocus = focus - lense;
+            Vector toLense = pbLense.rV() - pb2.rV();
+            Vector toPb2 = toLense.rIntersect(toFocus);
+            Vector lTopb2 = focus + toPb2;
+            g.DrawVector(toPb2,Pens.Yellow,pbLense.rV() + focus);
+            g.DrawVector(lTopb2, Pens.Blue, pbLense.rV());
         
         }
 

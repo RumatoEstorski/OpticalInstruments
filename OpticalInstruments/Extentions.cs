@@ -33,5 +33,16 @@ namespace OpticalInstruments
        {
            return new Vector(c.Left + c.Width / 2, c.Top + c.Height / 2);
        }
+
+        public static Vector rIntersect(this Vector v2, Vector v1)
+        {
+            double b1 = v1.Y;
+            double b2 = 0;
+            double k1 = b1 / v1.X;
+            double k2 = v2.Y / v2.X;
+            double x = (b2 - b1) / (k1 - k2);
+            double y = k2 * x + b2;
+            return - (new Vector(x, y) - v2);
+        }
     }
 }

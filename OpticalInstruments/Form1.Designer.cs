@@ -44,9 +44,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(725, 60);
+            this.button1.Location = new System.Drawing.Point(967, 74);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 23);
+            this.button1.Size = new System.Drawing.Size(153, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Выпуклая";
             this.button1.UseVisualStyleBackColor = true;
@@ -55,9 +56,10 @@
             // pb1
             // 
             this.pb1.Image = ((System.Drawing.Image)(resources.GetObject("pb1.Image")));
-            this.pb1.Location = new System.Drawing.Point(662, 334);
+            this.pb1.Location = new System.Drawing.Point(883, 411);
+            this.pb1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pb1.Name = "pb1";
-            this.pb1.Size = new System.Drawing.Size(73, 74);
+            this.pb1.Size = new System.Drawing.Size(97, 91);
             this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb1.TabIndex = 3;
             this.pb1.TabStop = false;
@@ -67,9 +69,10 @@
             // pb2
             // 
             this.pb2.Image = ((System.Drawing.Image)(resources.GetObject("pb2.Image")));
-            this.pb2.Location = new System.Drawing.Point(178, 78);
+            this.pb2.Location = new System.Drawing.Point(237, 96);
+            this.pb2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pb2.Name = "pb2";
-            this.pb2.Size = new System.Drawing.Size(82, 74);
+            this.pb2.Size = new System.Drawing.Size(109, 91);
             this.pb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb2.TabIndex = 4;
             this.pb2.TabStop = false;
@@ -79,9 +82,10 @@
             // pbLense
             // 
             this.pbLense.Image = ((System.Drawing.Image)(resources.GetObject("pbLense.Image")));
-            this.pbLense.Location = new System.Drawing.Point(420, 144);
+            this.pbLense.Location = new System.Drawing.Point(560, 177);
+            this.pbLense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbLense.Name = "pbLense";
-            this.pbLense.Size = new System.Drawing.Size(56, 191);
+            this.pbLense.Size = new System.Drawing.Size(75, 235);
             this.pbLense.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLense.TabIndex = 5;
             this.pbLense.TabStop = false;
@@ -90,39 +94,39 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(725, 89);
+            this.button6.Location = new System.Drawing.Point(967, 110);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(115, 23);
+            this.button6.Size = new System.Drawing.Size(153, 28);
             this.button6.TabIndex = 6;
             this.button6.Text = "Вогнутая";
             this.button6.UseVisualStyleBackColor = true;
-            
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(634, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(845, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.Size = new System.Drawing.Size(111, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Введите фокус:";
             // 
             // Focus
             // 
-            this.Focus.Location = new System.Drawing.Point(725, 9);
+            this.Focus.Location = new System.Drawing.Point(967, 10);
+            this.Focus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Focus.Maximum = 5;
             this.Focus.Minimum = 1;
             this.Focus.Name = "Focus";
-            this.Focus.Size = new System.Drawing.Size(115, 45);
+            this.Focus.Size = new System.Drawing.Size(153, 56);
             this.Focus.TabIndex = 10;
             this.Focus.Value = 1;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 494);
+            this.ClientSize = new System.Drawing.Size(1157, 608);
             this.Controls.Add(this.Focus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
@@ -130,6 +134,7 @@
             this.Controls.Add(this.pb2);
             this.Controls.Add(this.pb1);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);

@@ -85,6 +85,8 @@ namespace OpticalInstruments
         {
             return this - 2 * (this.Projection(OnVector.GetNorm()));
         }
+
+
         
     }
 }
