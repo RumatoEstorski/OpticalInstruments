@@ -55,15 +55,20 @@ namespace OpticalInstruments
             g.DrawLine(Pens.Black, pbLense.Location.X - F * 45 * 2, pbLense.Location.Y + pbLense.Height / 2 - 20, pbLense.Location.X - F * 45 * 2, pbLense.Location.Y + pbLense.Height / 2 + 20);
 
             Pen pen = Pens.Red;
-            Vector optical = new Vector(150, 0);
+            Vector optical = new Vector(500, 0);
             Vector start = pbLense.rV() - optical;
             g.DrawVector(optical * 2, pen, start);
-
+           
 
             Vector pad = (pbLense.rV()- pb2.rV()).Projection(optical);
             g.DrawVector(pad, pen, pb2.rV());
-
-
+            Vector pad2 = (pbLense.rV() - pb2.rV());
+            g.DrawVector(pad2, pen, pb2.rV());
+            Vector pad3 = (pb1.rV() - pbLense.rV());
+            g.DrawVector(pad3, pen, pbLense.rV());
+            Vector pad4 = (pb1.rV() - pb2.rV());
+            g.DrawVector(pad4, pen, pb2.rV());
+        
         }
 
 
