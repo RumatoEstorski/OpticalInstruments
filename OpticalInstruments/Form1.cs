@@ -32,6 +32,8 @@ namespace OpticalInstruments
             pStart = new Point(0, pbLense.Location.Y + pbLense.Height / 2);
             pFinish = new Point(this.Size.Width, pbLense.Location.Y + pbLense.Height / 2);
             pointSart = new Point(pb2.Location.X + pb2.Width/2, pb2.Location.Y + pb2.Height/2);
+            
+
         }//pb2.Location.X + f + d + pb1.Width + pb2.Width + pb3.Width
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,10 +42,15 @@ namespace OpticalInstruments
 
         }
 
-       // private void button6_Click(object sender, EventArgs e)
-       // {
-            //pbLense.Image = ((Image img = new Image"lince2"))); 
-       // }
+  
+
+
+
+
+        // private void button6_Click(object sender, EventArgs e)
+        // {
+        //pbLense.Image = ((Image img = new Image"lince2"))); 
+        // }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
@@ -55,7 +62,7 @@ namespace OpticalInstruments
             g.DrawLine(Pens.Black, pbLense.Location.X + pbLense.Width + F * 45 * 2, pbLense.Location.Y + pbLense.Height / 2 - 20, pbLense.Location.X + pbLense.Width + F * 45 * 2, pbLense.Location.Y + pbLense.Height / 2 + 20);
             g.DrawLine(Pens.Black, pbLense.Location.X - F * 45 * 2, pbLense.Location.Y + pbLense.Height / 2 - 20, pbLense.Location.X - F * 45 * 2, pbLense.Location.Y + pbLense.Height / 2 + 20);
 
-            Pen pen = Pens.Red;
+            Pen pen = Pens.Yellow;
             Vector focus = new Vector(1, 0)*F;
             Vector start = pbLense.rV() - 2*focus;
             g.DrawVector(focus * 4, Pens.Black, start);
@@ -74,7 +81,12 @@ namespace OpticalInstruments
             Vector lTopb2 = focus + toPb2;
             g.DrawVector(toPb2,Pens.Yellow,pbLense.rV() + focus);
             g.DrawVector(lTopb2, Pens.Blue, pbLense.rV());
-        
+            g.DrawVector(toLense, Pens.Blue, pb2.rV());
+            Vector v = pad + pb2.rV();
+            g.DrawVector(toFocus, Pens.Yellow, v);
+           
+
+
         }
 
 
